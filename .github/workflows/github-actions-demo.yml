@@ -21,6 +21,6 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t andry510/example:latest .
-  
+        
       - name: Push Docker image to Docker Hub
         run: docker push andry510/example:latest
