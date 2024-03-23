@@ -2,10 +2,8 @@ name: Dockerize Code with GitHub Actions
 
 on:
   push:
-    branches: [main]
+    branches: [main]  
 
-  paths: 
-    . src/**
 jobs:
    BuildContainer:
     name: Docker build
