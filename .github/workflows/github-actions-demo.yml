@@ -26,4 +26,4 @@ jobs:
         run: docker push andry510/example:latest
 
       - name: Run Docker image
-        run: docker run -d -p 3000:80 andry510/example:latest
+        run: docker run -d -p 3000:3000 andry510/example:latest
