@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
 
+  paths: 
+    . src/**
 jobs:
    BuildContainer:
     name: Docker build
@@ -20,7 +22,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t andry510/example:latest .
+        run: docker build --platform linux --tag andry510/example:latest -f src/dockerFile .
         
       - name: Push Docker image to Docker Hub
         run: docker push andry510/example:latest
