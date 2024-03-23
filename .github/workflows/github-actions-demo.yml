@@ -24,3 +24,6 @@ jobs:
         
       - name: Push Docker image to Docker Hub
         run: docker push andry510/example:latest
+
+      - name: Run Docker image
+        run: docker run -d -p 8080:80 andry510/example:latest
