@@ -2,9 +2,9 @@ FROM node:latest
 
 WORKDIR /app
 
-COPY ./src .
+COPY ./src ./
 
-COPY ./package.json .
+COPY ./package.json ./
 
 RUN npm install
 
